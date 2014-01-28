@@ -11,12 +11,12 @@ HERE = os.path.dirname(__file__)
 
 setup(
     name = "x256",
-    version = '0.0.2',
+    version = '0.0.3',
     description = "x256: manipulate xterm 256 color codes",
     author = "Martin Garcia",
     author_email = "newluxfero@gmail.com",
     license = "MIT",
-    url = "https://github.com/magarcia/python-x256",
+    url = "https://github.com/inndy/python-x256",
     packages = ["x256"],
     platforms = "POSIX",
     long_description = ("x256 can convert colors from rgb or hex to xterm 256 "
