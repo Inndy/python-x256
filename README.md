@@ -3,7 +3,7 @@ x256
 *This is a python version from [node-x256](https://github.com/substack/node-x256)*
 
 Return the nearest
-[xterm 256 color code](http://www.frexx.de/xterm-256-notes/)
+[xterm 256 color code](http://upload.wikimedia.org/wikipedia/en/1/15/Xterm_256color_chart.svg)
 for rgb inputs.
 
 
