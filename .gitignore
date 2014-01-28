@@ -29,5 +29,8 @@ pip-log.txt
 #Mac OSX
 .DS_Store
 
+# vim
+*.swp
+
 #Trial
 _trial_temp
