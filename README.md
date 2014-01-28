@@ -1,4 +1,4 @@
-x256 [![Build Status](https://secure.travis-ci.org/magarcia/python-x256.png?branch=master)](http://travis-ci.org/magarcia/python-x256)
+x256
 ====
 *This is a python version from [node-x256](https://github.com/substack/node-x256)*
 
@@ -23,19 +23,24 @@ output:
 
 or you can use raw ansi escape codes:
 
-    from x256 import x256
-    ix = x256.from_rgb(220, 40, 150)
-    print '\x1b[38;5;' + str(ix) + 'mBEEEEEP'
+	from x256 import x256
+    fore = from_rgb(220, 40, 90)
+    back = from_rgb(120, 180, 210)
+    set_fore_color(fore)
+    set_back_color(back)
+    _stdout.write('Colorful Text!!')
+    reset_color()
+    _stdout.write('  And the normal one....')
 
 output:
 
-![x256 raw beep](https://github.com/magarcia/python-x256/raw/master/screenshots/x256_raw_beep.png)
+![x256 test](https://github.com/inndy/python-x256/raw/master/screenshots/x256_test.png)
 
 
 Methods
 =======
 
-    var x256 = require('x256')
+    from x256 import x256
 
 x256.from_rgb(red, green, blue)
 -------------------------------
@@ -55,6 +60,16 @@ values.
 
 `hex` should be string without 0x.
 
+
+x256.from_html_color_name(name)
+-------------------------------
+
+Return the nearset xterm 256 color code form html color name.
+It returns `False` when the specific color name was not found.
+
+`name` should be string.
+
+
 x256.to_rgb(ix)
 ---------------
 
@@ -62,12 +77,39 @@ Return 24-bit `[red, green, blue]` values from xterm 256 color code.
 
 `ix` should be integer.
 
+
 x256.to_hex(ix)
 ---------------
 
 Return hexadecimal color from xterm 256 color code.
 
 `ix` should be integer.
+
+
+x256.set_fore_color(color[, stream])
+----------------------------------
+
+Set fore color for specific stream.
+
+default stream is `sys.stdout`
+`color` should be integer
+
+
+x256.set_back_color(color[, stream])
+------------------------------------
+
+Set background color for specific stream.
+
+default stream is `sys.stdout`
+`color` should be integer
+
+
+x256.reset_color([stream])
+--------------------------
+
+Reset colors to normal.
+
+default stream is `sys.stdout`
 
 
 Install
