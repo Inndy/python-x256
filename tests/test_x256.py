@@ -14,7 +14,7 @@ class Testx256(unittest.TestCase):
         self.rgb = [220, 40, 150]
         self.xcolor = 162
         self.hex = 'DC2896'
-        self.aprox_hex = 'D7087'
+        self.aprox_hex = 'D70087'
         self.aprox_rgb = [215, 0, 135]
 
     def test_from_rgb(self):
